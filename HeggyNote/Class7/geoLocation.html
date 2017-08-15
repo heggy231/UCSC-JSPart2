@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGUrQiyc0nEZ7afQOC94o1iIMlIhH3n8o"
+            async defer></script>
+    <style>
+        #container{
+            width: 540px;
+            height: 600px;
+            position: relative;
+            margin-left: 100px;
+            overflow: hidden;
+
+        }
+
+    </style>
+</head>
+<body>
+<p>
+    <button id="showGeolocation" onclick="showGeolocation()"> Click me to find you</button>
+
+</p>
+<div id="result"></div>
+<div id="container">
+</div>
+<script>
+    function successCallBack(myGeolocation){
+        let latitude = myGeolocation.coords.latitude;
+        let longitude = myGeolocation.coords.longitude;
+        let latlong = {lat: latitude, lng: longitude};
+        let map = new google.maps.Map(document.getElementById('container'), {
+            zoom: 20,
+            center: latlong
+        });
+
+        let marker = new google.maps.Marker({
+            position: latlong,
+            map: map
+        });
+
+    }
+    function errorCallBack(err){
+        console.log(err);
+    }
+
+    function showGeolocation() {
+        console.log('clicked');
+        if (!navigator.geolocation){
+           console.log("Browser Sucks")
+        }else{
+            navigator.geolocation.getCurrentPosition(successCallBack,errorCallBack);
+
+        }
+    }
+
+</script>
+</body>
+</html>

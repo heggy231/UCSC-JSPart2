@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Photo Gallery App using Object-Oriented JavaScript</title>
+    <link rel="stylesheet" href="style/style.css">
+  </head>
+  <body>
+    <!-- show i=0 photo upon page load-->
+    <img src="img/babyMeekats.jpeg" id = "photo-gallery" />
+    <p>
+      <!-- # = current page; sign (<) = &lt; -->
+      <a href="#" onclick="Gallery.Prev();">&lt; Previous</a> 
+      <!-- non-breaking space: &nbsp; -->
+      &nbsp;
+      <a href="#" onclick="Gallery.Next();">Next &gt;</a>
+    </p>
+
+    <!-- Gallery2 -->
+    <img src="img/ArcticFoxSleep.jpg" id = "photo-gallery2" />
+    <p>
+      <!-- # = current page; sign (<) = &lt; -->
+      <a href="#" onclick="Gallery2.Prev();">&lt; Previous</a>
+      <!-- non-breaking space: &nbsp; -->
+      &nbsp;
+      <a href="#" onclick="Gallery2.Next();">Next &gt;</a>
+    </p>
+    <!-- remember to add script tag at the end of and inside of body -->
+    <!-- <script type="text/javascript" src="hw1_objFunction.js"></script> --> 
+    <!-- <script type="text/javascript" src="hw1_LiteralNotation.js"></script>  -->
+    <!-- <script type="text/javascript" src="hw1_ObjConstructor.js"></script> -->
+    <!-- <script type="text/javascript" src="hw1_ObjProto.js"></script>      -->
+     <script type="text/javascript" src="hw1_ObjInheritance.js"></script> 
+  </body>
+</html>
