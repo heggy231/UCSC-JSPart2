@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the fixed number.</p>
+
+<input type="text" id="userInput1">
+<input type="text" id="userInput2">
+
+<button onclick="myFunction()">Click to Format</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        var theNumberKeyed1 = document.getElementById("userInput1").value;
+        var theNumberKeyed2 = document.getElementById("userInput2").value;
+        if(theNumberKeyed && isFinite(theNumberKeyed) && !isNan(theNumberKeyed1)){
+            // isFinite will convert it to number now really
+//            var num = Number(theNumberKeyed);
+//            var n = num.toFixed(2);
+            var n = theNumberKeyed1 + theNumberKeyed2;
+            document.getElementById("demo").innerHTML = n;
+
+        }else{
+            document.getElementById("demo").innerHTML = "Please enter the correct NUMERIC value";
+
+        }
+
+    }
+</script>
+
+</body>
+</html>

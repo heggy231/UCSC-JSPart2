@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instance of Operator Example</title>
+    <script type="text/javascript">
+
+        // Constructor Pattern
+        function hero(name, prop) {
+            this.name = name;
+            this.prop = prop;
+        }
+
+        //  let h = hero("Trevolta", "Goofy"); // hero is saved as a global create prop as window obj since this points to the window obj
+
+        let h = new hero("Trevolta", "Goofy"); // hero makes new
+
+
+        let o = new Object();
+        var m = {}
+        alert(h instanceof hero);
+        alert(h instanceof Object);
+        alert(o instanceof Object);
+        alert(m instanceof Object);
+
+        function factory(name, age) {
+            var adult;
+            if (age < 21) {
+                adult = false;
+
+            } else {
+
+                adult = true;
+            }
+            var o = new Object();
+            o.name = name;
+            o.age = age;
+            o.isAdult = adult;
+            return o;
+
+        }
+
+        // Factory
+        var person1 = factory("UCSC", 88);
+        console.log(person1.isAdult);
+        var person2 = factory("UCSC1", 19);
+        console.log(person2.isAdult);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

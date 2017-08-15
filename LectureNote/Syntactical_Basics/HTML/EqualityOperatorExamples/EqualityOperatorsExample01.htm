@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Equality Operators Example 1</title>
+    <script type="text/javascript">
+
+
+        var obj = {
+            breed: "fido",
+            valueOf: function () {
+                return 5;
+
+            }
+
+        };
+
+        var obj2 = {
+            breed: "fido",
+            valueOf: function () {
+                return 5;
+
+            }
+//            toString: function(){
+//                return "uc";
+//            }
+
+        };
+
+
+         // composition wise both are identical
+        // obj2 toString method
+        alert (obj1);
+        alert (obj2); // types uc
+
+        alert(5 == obj ); // true b/c valueOf
+        alert(5 === obj ); // false
+
+        alert(null == undefined);    //true
+        alert(null === undefined);   //false
+        
+        alert("NaN" == NaN);        //false
+        alert("NaN" === NaN);       //false
+        alert(NaN == NaN);          //false
+        alert(NaN === NaN);         //false
+        alert(NaN != NaN);          //true
+        alert(NaN !== NaN);         //true
+        
+        alert(false == 0);
+        alert(false === 0);
+        alert(true == 1);
+        alert(true === 1);
+        
+        alert(null == 0);
+        alert(undefined == 0);
+        
+        alert(5 == "5");
+        alert(5 === "5");
+
+        let str1 = "UCSC";
+        // if(str1.isNotNull, strisNotEmpty, str.isNotUndefined )
+           if(str){}
+
+    </script>
+
+</head>
+<body>
+  
+</body>
+</html>

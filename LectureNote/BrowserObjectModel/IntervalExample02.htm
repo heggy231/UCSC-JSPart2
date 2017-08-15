@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--In this example, the variable num is incremented every half second until it fi nally reaches the-->
+    <!--maximum number, at which point the interval is canceled.-->
+    <title>Interval Example 2</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        var num = 0;
+        var max = 100;
+        var intervalId = null;
+
+
+        function incrementNumber() {
+            console.log(num);
+            num++;
+
+
+            // when you meet the base condition num == max
+            //if the max has been reached, cancel all pending executions
+            if (num == max) {
+                    clearInterval(intervalId);
+                alert("Done");
+            }
+        }
+        // run this function over and over 5miliseconds = 0.5 second
+        intervalId = setInterval(incrementNumber, 50);
+
+
+    </script>
+</body>
+</html>
