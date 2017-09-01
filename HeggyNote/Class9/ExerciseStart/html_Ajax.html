@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Case</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2>Panels with Contextual Classes</h2>
+    <div class="panel-group">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Synchronous XHR</div>
+            <div class="panel-body">
+                <button class="btn btn-primary" onclick="synchXHR()">
+                    Load Request
+                </button>
+                <div id="output1" class="jumbotron">
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">Asynchronous XHR loading Text</div>
+            <div class="panel-body">
+                <button class="btn btn-primary" onclick="asynchXHRLoadText()">
+                    Load Request
+                </button>
+                <div id="output2" class="jumbotron">
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">Asynchronous XHR loading XML</div>
+            <div class="panel-body">
+                <button class="btn btn-primary" onclick="asynchLoadXML()">
+                    Load Request
+                </button>
+                <div id="output3" class="jumbotron">
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">Asynchronous XHR loading JSON</div>
+            <div class="panel-body">
+                <button class="btn btn-primary" onclick="asyncLoadJSON()">
+                    Load Request
+                </button>
+                <div id="output4" class="jumbotron">
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">Asynchronous XHR loading JSON and Images</div>
+            <div class="panel-body">
+                <button class="btn btn-primary" onclick="asyncLoadJSONAndImages()">
+                    Load Request
+                </button>
+                <div id="output5" class="jumbotron">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
