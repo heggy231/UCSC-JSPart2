@@ -12,6 +12,7 @@
 //   2. ES6 Classes.
 
 // Example gallery using the object literal notation:
+// resource: https://www.ibm.com/developerworks/library/wa-oojavascript/
 
 var Gallery = {
   // adding prop Images, CurrentIndexto custom obj using literal notation
